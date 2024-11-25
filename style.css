@@ -20,12 +20,13 @@
 nav{
     position: fixed;
     text-align: center;
-    background: #001736;
+    background: #101010;
     color: #ffffff;
     text-transform: uppercase;
     font-weight: 900;
     width: 100%;
     padding: 20px 0px 20px 0px;
+    border-bottom: 2px solid #FFFFFF;
     z-index: 30;
 }
 
@@ -48,38 +49,115 @@ main{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: #a2a2a2;
+    background: #101010;
     color: #101010;
-    height: 70vh;
-    padding: 10px 20px 10px 20px;
+    height: fit-content;
+    padding: 40px 0px 40px 0px;
+    border-top: 2px solid #FFFFFF;
+}
+.subbox1{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background: none;
+    height: 100%;
+    width: 95%;
+    padding: 20px;
+}
+
+.trackbarA{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    background: #000000;
+    border: 5px solid #000000;
+    width: 90%;
+    height: 10px;
+    margin: 10px 10px 10px 10px;
+    border-radius: 100px;
+    font-weight: 900;
+}
+.trackbarB1{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    background: #ffffff;
+    width: 90%;
+    height: 100%;
+    margin: 10px 5px 10px 0px;
+    border-radius: 100px;
+}
+.trackbarB2{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    background: #ffffff;
+    width: 50%;
+    height: 100%;
+    margin: 10px 5px 10px 0px;
+    border-radius: 100px;
+}
+.trackbarB3{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    background: #ffffff;
+    width: 70%;
+    height: 100%;
+    margin: 10px 5px 10px 0px;
+    border-radius: 100px;
 }
 
 .content2{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: #bcbcbc;
+    background: #101010;
     color: #101010;
-    height: 70vh;
-    padding: 10px 20px 10px 20px;
+    height: fit-content;
+    padding: 40px 0px 40px 0px;
+    border-top: 2px solid #FFFFFF;
+}
+.box2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    height: 100%;
+    width: 90%;
+    padding: 20px;
+    border-radius: 10px;
+}
+.item2{
+    background: #424242;
+    height: fit-content;
+    width: 95%;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
 }
 
 .content3{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: #a2a2a2;
+    background: #101010;
     color: #101010;
-    height: 70vh;
-    padding: 10px 20px 10px 20px;
+    height: fit-content;
+    padding: 40px;
+    border-top: 2px solid #FFFFFF;
+
 }
 
 footer{
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #001736;
+    background: #101010;
     padding: 20px 0px 20px 0px;
+    border-top: 2px solid #FFFFFF;
 }
 
 /* éléments*/
@@ -91,18 +169,41 @@ h1{
 }
 
 h2{
+    margin: 10px;
     background: none;
     font-size: 5em;
 }
 
 h3{
+    background: none;
     font-size: 2em;
     font-weight: 800;
 }
 
+p{
+    background: none;
+    margin: 20px 10px 20px 10px;
+    text-align: justify;
+}
+
 img{
     background: none;
-    margin: 10px;
+    margin: 5px;
+}
+
+button{
+    background: #007FA8;
+    border: none;
+    color: white;
+    margin-top: 20px;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 100px;
 }
 
 @media only screen and (max-width: 550px){
@@ -114,5 +215,20 @@ img{
     }
     h3{
         font-size: 1em;
+    }
+    .box2{
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 550px){
+    h3{
+        font-size: 1em;
+    }
+    .box1{
+        flex-direction: column;
+    }
+    .box2{
+        flex-direction: column;
     }
 }

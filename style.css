@@ -1,13 +1,16 @@
 *{
     color: #ffffff;
-    text-decoration: none;
     font-family: "Inter", sans-serif;
-    background: url(img/P3R3.jpg) fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
+    text-decoration: none;
     margin: 0;
     padding: 0;
     font-size: 12px;
+}
+
+body{
+    background: url(img/P3R3.jpg) fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .container{
@@ -20,13 +23,14 @@
 nav{
     position: fixed;
     text-align: center;
-    background: #101010;
+    background: none;
     color: #ffffff;
     text-transform: uppercase;
+    border-bottom: 2px solid #FFFFFF;  
+    backdrop-filter: blur(30px);   
     font-weight: 900;
     width: 100%;
     padding: 20px 0px 20px 0px;
-    border-bottom: 2px solid #FFFFFF;
     z-index: 30;
 }
 
@@ -35,7 +39,6 @@ main{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    backdrop-filter: blur(35%);
     color: #101010;
     height: 100vh;
     padding: 10px 20px 10px 20px;
@@ -43,6 +46,33 @@ main{
 .itemMain{
     align-items: center;
     justify-content: center;
+}
+.menu{
+    display: flex;
+    flex-direction: row;
+    background: none;
+    height: fit-content;
+    border: 2px solid #FFFFFF;  
+    backdrop-filter: blur(30px);   
+    font-weight: 700;
+    margin-top: 30px;
+    padding: 10px;
+    border-radius: 100px;
+}
+.menu a{
+    background: none;
+    font-size: 25px;
+    padding: 10px;
+    border-radius: 100px;
+    transition: 150ms;
+}
+.menu a:hover{
+    background: #101010;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;    
+    padding: 10px 40px 10px 40px;
+    transition: 150ms;
 }
 
 .content1{
@@ -52,8 +82,8 @@ main{
     background: #101010;
     color: #101010;
     height: fit-content;
-    padding: 40px 0px 40px 0px;
     border-top: 2px solid #FFFFFF;
+    padding: 40px 0px 40px 0px;
 }
 .subbox1{
     display: flex;
@@ -114,10 +144,9 @@ main{
     flex-direction: column;
     align-items: center;
     background: #101010;
-    color: #101010;
     height: fit-content;
-    padding: 40px 0px 40px 0px;
     border-top: 2px solid #FFFFFF;
+    padding: 40px 0px 40px 0px;
 }
 .box2{
     display: flex;
@@ -131,8 +160,9 @@ main{
     border-radius: 10px;
 }
 .item2{
-    background: #424242;
+    background: #4d4d4d;
     height: fit-content;
+    backdrop-filter: blur(40px);  
     width: 95%;
     margin: 10px;
     padding: 10px;
@@ -146,18 +176,20 @@ main{
     background: #101010;
     color: #101010;
     height: fit-content;
-    padding: 40px;
     border-top: 2px solid #FFFFFF;
-
+    padding: 40px;
 }
 
 footer{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    text-align: center;
     background: #101010;
-    padding: 20px 0px 20px 0px;
+    color: #ffffff;
+    text-transform: uppercase;
     border-top: 2px solid #FFFFFF;
+    font-weight: 900;
+    width: 100%;
+    padding: 20px 0px 20px 0px;
+    z-index: 30;
 }
 
 /* éléments*/
@@ -180,10 +212,16 @@ h3{
     font-weight: 800;
 }
 
+h4{
+    background: none;
+    font-size: 1.5em;
+    font-weight: 800;
+}
+
 p{
     background: none;
-    margin: 20px 10px 20px 10px;
     text-align: justify;
+    margin: 20px 10px 20px 10px;
 }
 
 img{
@@ -191,19 +229,30 @@ img{
     margin: 5px;
 }
 
+a{
+    background: none;
+    transition: 150px;
+}
+
 button{
-    background: #007FA8;
-    border: none;
+    background: #333333;
     color: white;
-    margin-top: 20px;
-    padding: 10px;
-    width: 100%;
+    border: none;
     text-align: center;
     text-decoration: none;
     display: inline-block;
+    margin-top: 20px;
+    padding: 10px;
+    width: 100%;
     font-size: 20px;
     font-weight: 600;
     border-radius: 100px;
+    transition: 150px;
+}
+button:hover{
+    background: #007FA8;
+    cursor: pointer;
+    transition: 150px;
 }
 
 @media only screen and (max-width: 550px){
@@ -211,24 +260,32 @@ button{
         font-size: 4em;
     }
     h2{
+        font-size: 2.5em;
+    }
+    h3{
         font-size: 2em;
     }
-    h3{
-        font-size: 1em;
+    h4{
+        font-size: 1.2em;
     }
-    .box2{
-        flex-direction: column;
-    }
-}
-
-@media only screen and (max-width: 550px){
-    h3{
-        font-size: 1em;
+    nav{
+        padding: 12px 0px 12px 0px;
     }
     .box1{
         flex-direction: column;
     }
     .box2{
         flex-direction: column;
+    }
+    .menu{
+        border-radius: 100px;
+    }
+    .menu a{
+        font-size: 15px;
+        padding: 10px;
+    }
+    .menu a:hover{
+        padding: 10px;
+        transition: 150ms;
     }
 }
